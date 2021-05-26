@@ -10,7 +10,7 @@
     <meta name="description" content="RemoteMonster live media service demo" />
     <meta name="author" content="Lucas Choi" />
 
-    <title>Video Config for Cast</title>
+    <title>그룹 화상회의</title>
 
     <!-- Custom fonts for this template-->
     <link
@@ -23,12 +23,12 @@
       rel="stylesheet"
     />
 
-    <link href="../../resources/vendor/fontawesome-free/css/all.min.css"
+    <link href="vendor/fontawesome-free/css/all.min.css"
 	rel="stylesheet" type="text/css">
 
 <!-- Custom styles for this template-->
-<link href="../../resources/css/sb-admin-2.min.css" rel="stylesheet">
-<link href="../../resources/css/studynote.css" rel="stylesheet">
+<link href="css/sb-admin-2.min.css" rel="stylesheet">
+<link href="css/studynote.css" rel="stylesheet">
     
     
     
@@ -41,8 +41,8 @@
   <body id="page-top">
     <!-- Page Wrapper -->
     <div id="wrapper">
-      <!-- Sidebar -->
-      <%@include file="/template/sidemenu.jsp"%>
+      <!-- Sidebar 
+        <%@include file="/template/sidemenu.jsp"%>-->
       <!-- End of Sidebar -->
 
       <!-- Content Wrapper -->
@@ -53,8 +53,8 @@
           <nav
             class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
           >
-            <%@include file="/template/topbar.jsp"%>
-            <!-- Sidebar Toggle (Topbar) -->
+<!--<%@include file="/template/topbar.jsp"%>
+             Sidebar Toggle (Topbar) -->
             <button
               id="sidebarToggleTop"
               class="btn btn-link d-md-none rounded-circle mr-3"
@@ -137,7 +137,7 @@
                               href="#"
                               class="btn btn-primary btn-user text-center"
                             >
-                            
+                            ENTER
                             </a>
                           </span>
                         </div>
@@ -303,11 +303,12 @@
         </div>
         <!-- End of Main Content -->
 
-        <!-- Footer -->
+        <!-- Footer 
+         <%@include file="template/footer.jsp"%>-->
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-             <%@include file="/template/footer.jsp"%>
+              
             </div>
           </div>
         </footer>
