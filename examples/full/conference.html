@@ -23,6 +23,17 @@
       rel="stylesheet"
     />
 
+    <link href="../../resources/vendor/fontawesome-free/css/all.min.css"
+	rel="stylesheet" type="text/css">
+
+<!-- Custom styles for this template-->
+<link href="../../resources/css/sb-admin-2.min.css" rel="stylesheet">
+<link href="../../resources/css/studynote.css" rel="stylesheet">
+    
+    
+    
+    
+    
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet" />
   </head>
@@ -31,10 +42,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
       <!-- Sidebar -->
-      <ul
-        class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
-        id="accordionSidebar"
-      ></ul>
+      <%@include file="../template/sidemenu.jsp"%>
       <!-- End of Sidebar -->
 
       <!-- Content Wrapper -->
@@ -45,6 +53,7 @@
           <nav
             class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
           >
+            <%@include file="../template/topbar.jsp"%>
             <!-- Sidebar Toggle (Topbar) -->
             <button
               id="sidebarToggleTop"
@@ -52,7 +61,7 @@
             >
               <i class="fa fa-bars"></i>
             </button>
-            <h3 class="h3 mb-4 text-gray-800">ConferenceCall Test</h3>
+            <h3 class="h3 mb-4 text-gray-800">화상 그룹 스터디</h3>
           </nav>
           <!-- End of Topbar -->
 
@@ -61,23 +70,10 @@
             <!-- Page Heading -->
             <h4 class="font-weight-bold">How to use</h4>
             <li>
-              Enter 클릭시 'remon' 이라는 conference Room 에 접속.
+              Enter 클릭시 방에 연결됩니다.
               Leave 클릭시 방을 떠납니다.
             </li>
-            <li>
-              Open the same
-              <a href="./conference.html" target="_blank">site</a> on
-              other tab or browser. Then click on channel you created in the
-              channel list.
-            </li>
-            <li>
-              Source code:
-              <a
-                href="https://github.com/RemoteMonster/web-sdk/blob/master/examples/full/conference.html"
-                target="_blank"
-                >github page</a
-              >
-            </li>
+          
             <br />
 
             <!-- Content Row -->
@@ -90,7 +86,7 @@
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
                   >
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Other Videos
+                      스터디원
                     </h6>
                   </div>
                   <!-- Card Body -->
@@ -109,7 +105,7 @@
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
                   >
                     <h6 class="m-0 font-weight-bold text-primary">
-                      Local Video
+                      내 화면
                     </h6>
                   </div>
                   <!-- Card Body -->
