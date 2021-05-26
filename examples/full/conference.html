@@ -42,7 +42,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
       <!-- Sidebar -->
-      <%@include file="../template/sidemenu.jsp"%>
+      <%@include file="/template/sidemenu.jsp"%>
       <!-- End of Sidebar -->
 
       <!-- Content Wrapper -->
@@ -53,7 +53,7 @@
           <nav
             class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
           >
-            <%@include file="../template/topbar.jsp"%>
+            <%@include file="/template/topbar.jsp"%>
             <!-- Sidebar Toggle (Topbar) -->
             <button
               id="sidebarToggleTop"
@@ -61,19 +61,20 @@
             >
               <i class="fa fa-bars"></i>
             </button>
-            <h3 class="h3 mb-4 text-gray-800">화상 그룹 스터디</h3>
+            <h3 class="h3 mb-4 text-gray-800">SST</h3>
           </nav>
           <!-- End of Topbar -->
 
           <!-- Begin Page Content -->
           <div class="container-fluid">
             <!-- Page Heading -->
-            <h4 class="font-weight-bold">How to use</h4>
+            <h4 class="font-weight-bold">스터디 룸</h4>
             <li>
-              Enter 클릭시 방에 연결됩니다.
-              Leave 클릭시 방을 떠납니다.
+              '입장하기' 클릭시 방에 연결됩니다.
             </li>
-          
+		  <li>
+           'Leave' 클릭시 방을 떠납니다.
+		  </li>
             <br />
 
             <!-- Content Row -->
@@ -105,7 +106,7 @@
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between"
                   >
                     <h6 class="m-0 font-weight-bold text-primary">
-                      내 화면
+                       화면
                     </h6>
                   </div>
                   <!-- Card Body -->
@@ -136,7 +137,7 @@
                               href="#"
                               class="btn btn-primary btn-user text-center"
                             >
-                            ENTER
+                            
                             </a>
                           </span>
                         </div>
@@ -306,10 +307,7 @@
         <footer class="sticky-footer bg-white">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span
-                >Copyright &copy;
-                <a href="https://remotemonster.com">RemoteMonster</a> 2020</span
-              >
+             <%@include file="/template/footer.jsp"%>
             </div>
           </div>
         </footer>
