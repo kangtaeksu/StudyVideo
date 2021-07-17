@@ -1,0 +1,37 @@
+import tensorflow as tf
+from tensorflow import keras
+from tensorflow.keras.layers import Input, Dense, Dropout, BatchNormalization
+from tensorflow.keras.models import Sequential, Model
+from tensorflow.keras.callbacks import EarlyStopping
+
+
+from keras.optimizer_v2.adam import Adam
+
+model = Sequential()
+
+model.add(Dense(64, activation='relu', input_shape=(13,))
+model.add(BatchNormalization())
+model.add(Dropout(0.3))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(1, activation = 'sigmoid'))
+
+
+model.compile(loss='binary_crossentropy', optimizer=Adam(lr=0.001), metrics=['acc'])
+
+es = EarlyStopping(monitor='val_loss', mode='min', verbose=1, patience=10)
+
+history = model.fit(x_train, train_y, epochs=100,  
+
+                 batch_size=10, verbose=2, validation_split=0.2,   
+
+                 callbacks=es) 
+                 
+                 
+h = history
+plt.plot(h.history['acc'])
+plt.plot(h.history['val_acc'])
+plt.title('Accuracy')
+plt.xlabel('epochs')
+plt.ylabel("accuracy")
+plt.show()
